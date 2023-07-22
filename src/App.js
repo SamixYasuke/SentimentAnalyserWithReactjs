@@ -23,7 +23,7 @@ const App = () => {
     setLoader(true);
     setError(null);
     setSentiment(null);
-    const apiKey = "HP9r7jHtOMuqg4pe7NY1Ig==2V1iCTCutkI4ZZeN";
+    const apiKey = process.env.API_KEY2;
     const apiUrl = `https://api.api-ninjas.com/v1/sentiment?text=${encodeURIComponent(input)}`;
     try {
       const response = await Axios.get(apiUrl, {
